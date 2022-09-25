@@ -1,0 +1,268 @@
+
+@font-face {
+    font-family: 'Gauge - Heavy';
+    src: url(../Fonts/Gauge/Gauge-Heavy.otf);
+}
+
+@font-face {
+    font-family: 'Gauge - Oblique';
+    src: url(../Fonts/Gauge/Gauge-Oblique.otf);
+}
+
+@font-face {
+    font-family: 'Gauge - Regular';
+    src: url(../Fonts/Gauge/Gauge-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Nunito - Regular';
+    src: url(../Fonts/Nunito/static/Nunito-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height:100vh;
+    font-size: 2em;
+    font-family: 'Gauge - Regular', Helvetica;
+}
+
+h1{
+    color:white;
+    font-size: 2.5em;
+    font-weight: 600;
+    z-index: 2;
+    text-shadow: 2px 2px 10px #999;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.container{
+    min-height:100vh;
+    width:100%;
+}
+
+.container-one{
+    background-image: url(../images/mountain-field.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    z-index: -2;
+}
+
+.container-two{
+    background-color: #0d0c22;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;;
+}
+
+.container-two .service-container{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-two h1{
+    font-size: 2em;
+    text-decoration: underline;
+    margin:1em 0;
+}
+
+.container-two img{
+    background-color: #fff;
+    color:#111;
+    width:14em;
+    height:12em;
+    border-radius: .2em;
+}
+
+.container-two .services-item{
+    width:40vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .6em;
+    box-sizing: border-box;
+}
+
+.container-two .services-item span{
+    display: flex;
+    padding:1em;
+    width:70%;
+    background-color: #232335;
+    border-radius: 0 .4em .4em 0;
+}
+
+.container-two .right-aligned{
+    align-self: flex-end;
+}
+
+.container-two .right-aligned span{
+    border-radius: .4em 0 0 .4em;
+}
+
+.transparent-layer{
+    background-color: #000;
+    opacity:30%;
+    position:absolute;
+    height:100vh;
+    width:100%;
+    top:0;
+    z-index: -1;
+}
+
+.transparent-layer-style-2{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50,50,50,0.8)), to(rgba(80,80,80,0.2)), color-stop(.5,#333333));
+}
+
+.top-layer{
+    height:100vh;
+    width:100%;
+    z-index: 2;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-logo{
+    width:32em;
+    height:10em;
+    background-image: url(../images/Logo\ Art/BHLogo_2Wh.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 5em;
+}
+
+nav{
+    position: fixed;
+    width:100%;
+    min-height:10vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em 2em;
+    box-sizing: border-box;
+    font-size: .8em;
+    transition: .4s ease-in-out;
+    color:white;
+    z-index: 3;
+}
+
+.adjusted{
+    background-color: white;
+    padding:1em 4em;
+    color:#000;
+}
+
+nav .nav-logo{
+    width:4em;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    width:40vw;
+    box-sizing: border-box;
+}
+
+nav ul li{
+    list-style: none;
+    letter-spacing: .1em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#444343;
+}
+
+.main-quote{
+    font-size: .6em;
+    width:40%;
+    position: relative;
+    left:4em;
+    color:#DEDDDB;
+    font-weight: 600;
+    margin-top: 3em;
+}
+
+.hide-styler{
+    position: absolute;
+    top:93vh;
+    left:1vw;
+    font-family: 'Nunito - Regular';
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 4em;
+    border-radius: 1em;
+}
+
+.background-cycle{
+    font-family: 'Nunito - Regular', Helvetica;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top:93vh;
+    left:8.5vw;
+    background-color: #fff;
+    border-radius: 1em;
+    width:18vw;
+}
+
+.background-cycle img{
+    border:solid black 2px;
+    border-radius: 50%;
+}
+
+.background-cycle img:hover{
+    cursor: pointer;
+}
+
+.background-opacity{
+    position: absolute;
+    top:93vh;
+    left:27vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Nunito - Regular';
+    border-radius: 1em;
+    width:20vw;
+}
+
+.background-opacity input{
+    width:2em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.background-opacity button{
+    font-size: .6em;
+}
+
+.horizontal-row{
+    background-color: #333;
+    width:50vw;
+    height:.2vh;
+    margin:.8em 0;
+}
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Hog Land Clearing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-one container">
+        
+    </div>
+    <div class="transparent-layer"></div>
+    <div class="top-layer">
+        
+        <nav>
+            <img class="nav-logo" src="../images/BHBadHog.png">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+
+        <!--
+            Try a div with background image instead so I can center to get around the image whitespace
+            
+            <img class="main-logo" src="../images/Logo Art/BHLogo_2Wh.png">
+        -->
+
+        <div class="main-logo"></div>
+
+        <div class="main-quote">
+            <i>- Because taming wilderness takes a force of nature.</i>
+        </div>
+        <div class="hide-styler">
+            <label>Hide</label>
+            <input id="hide-elements" type="checkbox">
+        </div>
+        <div class="background-cycle">
+            <img class="left-chev" src="../images/chevron-left.svg">
+            <span class="background-name-tag">Background 1</span>
+            <img class="right-chev" src="../images/chevron-right.svg">
+        </div>
+        <div class="background-opacity">
+            <label for="">Opacity (%):</label>
+            <input class="opacity-field" value="30">
+            <button class="opacity-btn">Apply</button>
+        </div>
+    </div>
+    <div class="container-two container">
+
+        <h1>Services</h1>
+
+        <div class="service-container">
+            <div class="services-fence-clearing services-item">
+                <img src="" alt="Fence Line Clearing">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            </div>
+            <div class="horizontal-row"></div>
+            <div class="services-lot-clearing services-item right-aligned">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                <img src="" alt="Lot Clearing">
+            </div>
+            <div class="horizontal-row"></div>
+            <div class="services-tree-trimming services-item">
+                <img src="" alt="Tree Trimming Clearing">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            </div>
+            <div class="horizontal-row"></div>
+            <div class="services-tree-removal services-item right-aligned">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                <img src="" alt="Tree Removal Clearing">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        const container = document.querySelector('.container-one')
+        const transparentLayer = document.querySelector('.transparent-layer')
+
+        const hideBox = document.getElementById('hide-elements')
+
+        const backgroundOpacity = document.querySelector('.background-opacity')
+        const backgroundCycle = document.querySelector('.background-cycle')
+
+        const nameTag = document.querySelector('.background-name-tag')
+        const chevLeft = document.querySelector('.left-chev')
+        const chevRight = document.querySelector('.right-chev')
+
+        const opacity = document.querySelector('.opacity-field')
+        const opacityBtn = document.querySelector('.opacity-btn')
+
+        var backgroundNumber = 1
+
+        hideBox.addEventListener('change', () => {
+            backgroundCycle.classList.toggle('hidden')
+            backgroundOpacity.classList.toggle('hidden')
+        })
+
+        opacityBtn.addEventListener('click', () => {
+            var opacityValue = opacity.value
+            transparentLayer.style.opacity = `${opacityValue}%`
+        })
+
+        chevLeft.addEventListener('click', () => {
+            if(backgroundNumber == 1){
+                backgroundNumber = 6
+            } else {
+                backgroundNumber --
+            }
+
+            switch(backgroundNumber){
+                case 1:
+                    container.style.backgroundImage = "url('../images/mountain-field.jpg')"
+                    container.style.backgroundPosition = 'top'
+                    break
+                case 2:
+                    container.style.backgroundImage = "url('../images/mountain-lake.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+                case 3:
+                    container.style.backgroundImage = "url('../images/mountain.jpg')"
+                    container.style.backgroundPosition = 'bottom'
+                    break
+                case 4:
+                    container.style.backgroundImage = "url('../images/meadow-on-autumn.jpg')"
+                    container.style.backgroundPosition = 'top'
+                    break
+                case 5:
+                    container.style.backgroundImage = "url('../images/cliff-spire.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+                case 6:
+                    container.style.backgroundImage = "url('../images/bernard-hermant-mountain.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+            }
+
+            nameTag.textContent = `Background ${backgroundNumber}`
+        })
+
+        chevRight.addEventListener('click', () => {
+            if(backgroundNumber == 6){
+                backgroundNumber = 1
+            } else {
+                backgroundNumber ++
+            }
+
+            nameTag.textContent = `Background ${backgroundNumber}`
+
+            switch(backgroundNumber){
+                case 1:
+                    container.style.backgroundImage = "url('../images/mountain-field.jpg')"
+                    container.style.backgroundPosition = 'top'
+                    break
+                case 2:
+                    container.style.backgroundImage = "url('../images/mountain-lake.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+                case 3:
+                    container.style.backgroundImage = "url('../images/mountain.jpg')"
+                    container.style.backgroundPosition = 'bottom'
+                    break
+                case 4:
+                    container.style.backgroundImage = "url('../images/meadow-on-autumn.jpg')"
+                    container.style.backgroundPosition = 'top'
+                    break
+                case 5:
+                    container.style.backgroundImage = "url('../images/cliff-spire.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+                case 6:
+                    container.style.backgroundImage = "url('../images/bernard-hermant-mountain.jpg')"
+                    container.style.backgroundPosition = 'center'
+                    break
+            }
+        })
+
+
+        const nav = document.querySelector('nav')
+
+        window.addEventListener('scroll', e => {
+            nav.classList.toggle('adjusted', window.pageYOffset > 0)
+        })
+
+    </script>
+</body>
+</html>
