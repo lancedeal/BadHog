@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BH Small Sets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing"></div>
+    <div class="control">
+        <img class="chevL" src="../../images/chevron-left.svg">
+        <span class="control-name">Background 1</span>
+        <img class="chevR" src="../../images/chevron-right.svg">
+    </div>
+
+    <script>
+
+        const landing = document.querySelector('.landing')
+
+        const chevL = document.querySelector('.chevL')
+        const chevR = document.querySelector('.chevR')
+        var background = document.querySelector('.control-name')
+        var backgroundNumber = 1
+
+        chevL.addEventListener('click', () => { handleBGNumber('subtract') })
+        chevR.addEventListener('click', () => { handleBGNumber('add') })
+
+        function handleBGNumber(operation){
+            if(operation == 'subtract'){
+                if(backgroundNumber == 1){
+                    backgroundNumber = 8
+                } else {
+                    backgroundNumber--
+                }
+            } else {
+                if(backgroundNumber == 8){
+                    backgroundNumber = 1
+                } else {
+                    backgroundNumber++
+                }
+            }
+            switchBG(backgroundNumber)
+        }
+
+        function switchBG(currentBG){
+            /*
+            if(operation == 'subtract'){
+                if(backgroundNumber == 1){
+                    backgroundNumber = 8
+                } else {
+                    backgroundNumber--
+                }
+            } else {
+                if(backgroundNumber == 8){
+                    backgroundNumber = 1
+                } else {
+                    backgroundNumber++
+                }
+            }
+            */
+
+            switch(currentBG){
+                case 1:
+                    landing.style.backgroundImage = "url(../../images/cliff-spire.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 2:
+                    landing.style.backgroundImage = "url(../../images/meadow-on-autumn.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 3:
+                    landing.style.backgroundImage = "url(../../images/BackgroundTX/field1.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 4:
+                    landing.style.backgroundImage = "url(../../images/BackgroundTX/bigbend1.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 5:
+                    landing.style.backgroundImage = "url(../../images/BackgroundTX/guadalupe1.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 6:
+                    landing.style.backgroundImage = "url(../../images/BackgroundTX/paloduro1.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 7:
+                    landing.style.backgroundImage = "url(../../images/bernard-hermant-mountain.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                case 8:
+                    landing.style.backgroundImage = "url(../../images/mountain.jpg)"
+                    background.textContent = `Background ${currentBG}`
+                    break
+                
+            }
+        }
+
+    </script>
+</body>
+</html>
