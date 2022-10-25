@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Hog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/akq4vhi.css">
+</head>
+<body>
+    <div class="landing-bg"></div>
+    <div class="landing-filter"></div>
+    <div class="landing">
+        <nav>
+            <img class="nav-logo" src="../../../images/Alternate_BHBoar/BHBoar_Invoice_Ts_WhTrim.png">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+        <div class="logo"></div>
+        <div class="quote">Because Taming Wilderness Takes a Force of Nature</div>
+    </div>
+    <div class="services">
+        <div class="section-header">Services</div>
+        <div class="banner">
+            <span>Lot Clearing</span>
+            <img src="../../../images/circle.svg">
+            <span>Fence Line Clearing</span>
+            <img src="../../../images/circle.svg">
+            <span>Tree Trimming</span>
+            <img src="../../../images/circle.svg">
+            <span>Tree Removal</span>
+        </div>
+        <div class="description-text">Licensed and Insured</div>
+        <div class="get-involved">
+            <button class="quote-btn">Get an Estimate</button>
+            <div class="description-text">OR</div>
+            <div>(555) 555 - 5555</div>
+        </div>
+    </div>
+
+    <div class="whitespace"></div>
+
+    <script>
+
+        const logo = document.querySelector('.nav-logo')
+        const nav = document.querySelector('nav')
+
+        window.addEventListener('scroll', e => {
+            nav.classList.toggle('activated', window.pageYOffset > 0)
+            logo.classList.toggle('filled', window.pageYOffset > 0)
+
+            /*
+            if(window.pageYOffset > 0){
+                logo.src = '../../../images/Alternate_BHBoar/BHBoar_Invoice_Wh.png'
+            } else {
+                logo.src = '../../../images/Alternate_BHBoar/BHBoar_Invoice_Ts_Wh.png'
+            }
+            */
+        })
+
+    </script>
+</body>
+</html>
