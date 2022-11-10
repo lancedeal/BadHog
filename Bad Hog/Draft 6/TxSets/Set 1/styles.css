@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Noto+Sans+Warang+Citi&family=Open+Sans&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'Roboto Mono - Light';
+    src: url(../../Fonts/Roboto\ Mono/RobotoMono-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Mono - Thin';
+    src: url(../../Fonts/Roboto\ Mono/RobotoMono-Thin.ttf);
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    font-size: 2em;
+    --nav-height:3em;
+    --primary:#AF936E;
+    --secondary:#C6B08E;
+    --black:#010101;
+    --white:#f3f3f3;
+
+    background-color: #e2efeb;
+}
+
+.landing-bg{
+    height:70vh;
+    width:100%;
+    background-image: url(../../../images/BackgroundTX/field1.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.landing-filter{
+    height:70vh;
+    width:100%;
+    background-color: black;
+    opacity: 10%;
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+
+.landing{
+    height:70vh;
+    /*
+    background-image: url(../../../images/BackgroundTX/field1.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+
+nav{
+    width:100%;
+    height:var(--nav-height);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Slab','Noto Sans Warang Citi';
+    padding: 0 1em;
+    box-sizing: border-box;
+    position:fixed;
+    transition: .4s ease-in-out;
+    z-index: 5;
+}
+
+nav img{ width: 2.5em; transition: .4s ease-in-out;}
+
+nav ul{
+    width:35vw;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    letter-spacing: 0.04em;
+    box-sizing: content-box;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    transition: .4s ease-in-out;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    transition: none;
+}
+
+.activated{
+    background-color: #303030;
+    padding: 0 3em;
+}
+
+.activated ul li a:hover{
+    text-decoration-color: var(--secondary);
+}
+
+.logo{
+    background-image: url(../../../images/Logo\ Art/BHLogo_1Wh.png);
+    background-position: center;
+    background-size: cover;
+    width:26em;
+    height:10em;
+    margin-top: var(--nav-height);
+}
+
+.quote{
+    color:var(--white);
+    font-size: .7em;
+    margin-top: -2.5em;
+    font-family: 'Roboto Slab';
+}
+
+.services{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto Slab';
+}
+
+.section-header{
+    width:100%;
+    background-color: #0C1232 ;
+    color:white;
+    text-align: center;
+    padding: .3em;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab';
+    box-sizing: border-box;
+}
+
+.banner{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:2em;
+    color:#303030
+}
+
+.banner img{
+    width:.5em;
+}
+
+.services .description-text{
+    font-weight: 600;
+    font-size: .6em;
+}
+
+.services .quote-btn{
+    width:12vw;
+    height: 5vh;
+    background: linear-gradient(0deg, rgba(198,33,47,1) 0%, rgba(227,38,54,1) 100%) ;
+    border:none;
+    color:white;
+    font-size: .7em;
+}
+
+.services .quote-btn:hover{
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(177,29,41,1) 00%, rgba(207,35,49,1) 100%);
+}
+
+.get-involved{
+    height: 30vh;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about{
+    min-height: 100vh;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container{
+    width:60vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-container img{
+    width:11em;
+    border-radius: .1em;
+}
+
+.about-container .content{
+    width:30vw;
+    font-family: 'Roboto Slab';
+    font-size: .75em;
+    /*
+    color:#6f6e72;
+    */
+    color:#615F5F ;
+    padding: 1em;
+}
+
+.about .hr{
+    width:40vw;
+    height: 2px;
+    margin: .5em 0;
+    background-color: #6f6e72;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .hr img{ 
+    width: .5em;
+    background-color: #e2efeb;
+    margin: 0 1em;
+}
+
+.whitespace{
+    height:100vh;
+}
+
+.filled{
+    background-color: var(--secondary);
+}
