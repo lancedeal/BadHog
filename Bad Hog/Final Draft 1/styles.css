@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Noto+Sans+Warang+Citi&family=Open+Sans&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+
+    
+    --primary:#AF936E;
+    --secondary:#C6B08E;
+    --black:#010101;
+    --white:#f3f3f3;
+    --mission-statement:#E2EFE8     ;
+
+    --nav-height:10vh;
+}
+
+.whitespace{
+    height: 200vh;
+}
+
+.section-1 .bg-img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../images/BackgroundTX/field1.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.section-1 .bg-filter{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 20%;
+    z-index: 2;
+}
+
+.section-1 .content{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-1 .content .landing{
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color:#f1f1f1;
+    font-size: 2em;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+    padding: 0 1em;
+    box-sizing: border-box;
+    transition: .4s ease-in-out;
+    z-index: 10;
+}
+
+.activated{
+    background-color: #303030;
+    padding: 0 3em;
+}
+
+.activated a:hover{
+    text-decoration-color: var(--secondary);
+}
+
+.filled{
+    background-color: var(--secondary);
+}
+
+nav img{
+    width: 3.5em;
+}
+
+nav ul{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li{
+    font-size: 1.2em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:azure;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: .2vh;
+}
+
+.nav-buffer{
+    height: 6em;
+}
+
+.landing img{
+    width: 40vw;
+    margin-top: -5em;
+    margin-bottom: -5em;
+}
+
+.quote{
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 2.5em;
+}
+
+.section-1 .content .service-content{
+    width: 100%;
+    min-height: 120vh;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-content .content-header{
+    width:100%;
+    height:1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    background-color: #0C1232;
+    color:#f1f1f1;
+}
+
+.banner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-content .service-banner{
+    font-size: 2.2em;
+    padding: 1.5em;
+}
+
+.service-content .service-banner span{
+    padding: 0 .5em;
+}
+
+.service-content img{ width: .5em; }
+
+.service-content .sub-text{
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: -1em;
+}
+
+.service-content .service-locations{
+    font-size: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    color: #303030;;
+}
+
+.service-content .service-contact{
+    margin-top: 3em;
+    font-size: 1.3em;
+}
+
+.service-content .phone-numbers{
+    font-size: 1.5em;
+    margin: .5em 0 2em 0;
+}
+
+.mission-statement{
+    width: 100%;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    padding: 2em 15vw;
+    margin-bottom: 2em;
+    /*
+    background-color: #E2EFE8  ;
+    background-color: #CBC1AE     ;
+    */
+    background-color: var(--mission-statement);
+}
+
+.mission-statement-header{
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mission-statement-body{
+    line-height: 1.5em;
+}
+
+.service-information{
+    width:60%;
+    min-height: 30vh;
+    box-sizing: border-box;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-panel{
+    width:50vw;
+    height:30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel-img{
+    width: 30%;
+    height: 25vh;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-img img{
+    width: 3em;
+}
+
+.panel-body{
+    width:60%;
+    height: 80%;
+}
+
+.panel-header{
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: .4em;
+}
+
+.panel-header-2{
+    font-size: 2em;
+    text-decoration: underline;
+    padding: 1em 0 2em 0;
+}
+
+.panel-text{
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.service-footer{
+    width: 100%;
+    height: 30vh;
+    background-color: var(--mission-statement)       ;
+}
+
+.about-content{
+    position: relative;
+    height:60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:azure;
+}
+
+.about-content .container{
+    width:60%;
+    height:60%;
+    border-top: azure .15em solid;
+    border-bottom: azure .15em solid;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-content .container .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+}
+
+.about-content .container .text .header{
+    font-size: 2.4em;
+    font-weight: 600;
+    background: none;
+    height: 1em;
+}
+
+.about-content .container .text .body{
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+.about-content .container .img{
+    background-color: #303030;
+    width:22%;
+    height:80%;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content .container .img img{ width:3em }
+
+.contact-content{
+    position: relative;
+    min-height:55vh;
+    background-color: azure;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content .contact-header{
+    font-size: 3em;
+    position: relative;
+    right:6em;
+    color:#7a7a7a;
+}
+
+.contact-content .contact-text{
+    position: relative;
+    left: 5em;
+    font-size: 1.7em;
+    margin-top: 1em;
+    width: 40%;
+    line-height: 2.2;
+}
+
+.contact-content .row-two{
+    position: relative;
+    left:2em;
+}
+
+.contact-content .row-three{
+    position: relative;
+    left:4em;
+}
+
+.contact-content .email{
+    font-size: 1.2em;
+}
+
+.contact-content .phone-number{
+    font-size: 1.2em;
+}
+
+footer{
+    background-color: #000;
+    height: 16vh;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+footer img{
+    width: 8vw;
+}
+
+#service-tag{
+    position: relative;
+    bottom: var(--nav-height);
+}
+
+#about-tag{
+    position: relative;
+    bottom: var(--nav-height);
+}
+
+#contact-tag{
+    position: relative;
+    bottom: var(--nav-height);
+}
