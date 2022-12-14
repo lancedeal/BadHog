@@ -84,6 +84,7 @@ nav{
 
 nav img{
     width: 3.5em;
+    transition: .4s ease-in-out;
 }
 
 nav ul{
